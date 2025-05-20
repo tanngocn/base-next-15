@@ -1,0 +1,14 @@
+{
+  "common": {
+    "addToCart": "Thêm vào giỏ hàng",
+    "price": "Giá",
+    "discount": "Giảm giá",
+    "rating": "Đánh giá",
+    "cancel": "Hủy",
+    "confirm": "Xác nhận"
+  },
+  "home": {
+    "title": "Chào mừng đến với cửa hàng",
+    "description": "Khám phá những sản phẩm tuyệt vời"
+  }
+} 

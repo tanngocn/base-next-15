@@ -1,0 +1,14 @@
+{
+  "common": {
+    "addToCart": "Add to Cart",
+    "price": "Price",
+    "discount": "Discount",
+    "rating": "Rating",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "home": {
+    "title": "Welcome to our store",
+    "description": "Discover amazing products"
+  }
+} 
