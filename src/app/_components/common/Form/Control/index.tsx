@@ -1,7 +1,16 @@
-import { FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { cn } from '@/lib/utils';
-import React, { FC, ReactElement } from 'react';
-import { useFormContext } from 'react-hook-form';
+"use client";
+
+import {
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { cn } from "@/lib/utils";
+import React, { FC, ReactElement } from "react";
+import { useFormContext } from "react-hook-form";
 
 interface IFormItemProps {
   children: ReactElement<{ field?: unknown }>;
@@ -12,7 +21,14 @@ interface IFormItemProps {
   className?: string;
 }
 
-const FormControlItem: FC<IFormItemProps> = ({ children, required = false, label, name, description, className }) => {
+const FormControlItem: FC<IFormItemProps> = ({
+  children,
+  required = false,
+  label,
+  name,
+  description,
+  className,
+}) => {
   const { control } = useFormContext();
   return (
     <FormField
@@ -28,7 +44,7 @@ const FormControlItem: FC<IFormItemProps> = ({ children, required = false, label
           )}
           <FormControl>{React.cloneElement(children, { field })}</FormControl>
           {description && <FormDescription>{description}</FormDescription>}
-          <FormMessage className="!mt-[0px]" />
+          <FormMessage className="!mt-[0px] text-[#ff0000]" />
         </FormItem>
       )}
     />

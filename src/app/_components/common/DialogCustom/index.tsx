@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Dialog,
@@ -9,7 +9,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { useTranslations } from 'next-intl';
 
 interface DialogCustomProps {
   trigger?: React.ReactNode;
@@ -30,17 +29,13 @@ export const DialogCustom = ({
   open,
   onOpenChange,
 }: DialogCustomProps) => {
-  const t = useTranslations('common');
-
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       {trigger && <DialogTrigger asChild>{trigger}</DialogTrigger>}
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           {title && <DialogTitle>{title}</DialogTitle>}
-          {description && (
-            <DialogDescription>{description}</DialogDescription>
-          )}
+          {description && <DialogDescription>{description}</DialogDescription>}
         </DialogHeader>
         {children}
         {footer && <DialogFooter>{footer}</DialogFooter>}

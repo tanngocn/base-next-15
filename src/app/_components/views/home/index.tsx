@@ -1,16 +1,11 @@
-'use client'
+"use client";
 
-import { ProductCard } from '@/app/_components/common/Card'
-import { useTranslations } from 'next-intl'
+import { ProductCard } from "@/app/_components/common/Card";
 
-const Section = ({ data }: any) => {
-  const t = useTranslations('home')
-
+const Section = () => {
   return (
-    <div className='home-page'>
-      <h1 className='text-lg'>{t('title')}</h1>
-      <p>{t('description')}</p>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4'>
+    <div className="home-page">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
         {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
           <ProductCard
             key={item}
@@ -26,6 +21,6 @@ const Section = ({ data }: any) => {
         ))}
       </div>
     </div>
-  )
-}
-export default Section
+  );
+};
+export default Section;

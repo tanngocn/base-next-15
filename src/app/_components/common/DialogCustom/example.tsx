@@ -1,13 +1,11 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { DialogCustom } from './index';
-import { Button } from '@/components/ui/button';
-import { useTranslations } from 'next-intl';
+import { useState } from "react";
+import { DialogCustom } from "./index";
+import { Button } from "@/components/ui/button";
 
 export const DialogExample = () => {
   const [open, setOpen] = useState(false);
-  const t = useTranslations('common');
 
   return (
     <DialogCustom
@@ -19,11 +17,9 @@ export const DialogExample = () => {
       footer={
         <div className="flex gap-2">
           <Button variant="outline" onClick={() => setOpen(false)}>
-            {t('cancel')}
+            cancel
           </Button>
-          <Button onClick={() => setOpen(false)}>
-            {t('confirm')}
-          </Button>
+          <Button onClick={() => setOpen(false)}>confirm</Button>
         </div>
       }
     >
@@ -32,4 +28,4 @@ export const DialogExample = () => {
       </div>
     </DialogCustom>
   );
-}; 
+};
